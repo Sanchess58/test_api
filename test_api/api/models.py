@@ -5,5 +5,5 @@ class Task(models.Model):
     """Класс модели Task"""
     title = models.CharField(max_length=200)
     description = models.TextField()
-    completed = models.BooleanField()
+    completed = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)

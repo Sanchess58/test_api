@@ -4,9 +4,9 @@ from rest_framework.routers import DefaultRouter
 from .views import TaskViewSet
 
 router = DefaultRouter()
-router.register('get_all', TaskViewSet, basename='get_all')
+router.register('tasks', TaskViewSet, basename='tasks')
 
 
 urlpatterns = [
-    path('', include(router.urls)),
+    path('api/', include(router.urls)),
 ]
